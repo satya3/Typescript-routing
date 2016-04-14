@@ -1,0 +1,42 @@
+    <div class='container' ng-if="productlist" >
+		<div class='row' id ='divProductListTop' ng-if="productlist" style='display:none' >
+			<div [hidden]="!CartItems.length">  
+				<h4>Cart Items {{CartItems.length}} </h4><a class="btn btn-sm btn-success" (click)="checkOut()" ng-transclude=""><span class="ng-scope">Checkout</span></a>
+		
+  			</div>
+		<br/>
+		<br/>
+		</div>	
+			<div style="clear:both;"></div>
+			<br/>
+	  		<br/>
+	  		<div class='row'>
+	  		<div class='col-lg-6 col-sm-12'>
+			<input type="text"  #filter (keyup)="0"  id="searchInput" style="" placeholder="search Product" class="form-control"></div>
+		</div>
+		<div class='row'>
+	  		<div class='col-lg-3 col-sm-3'  *ngFor="#info of productlist  | myfilter:filter.value " >
+				<div class="thumbnail" >
+							<img src="src/app/img/products/{{info.code}}.jpg" >
+			                <h4 class="ng-binding">{{info.name}}</h4>
+			                <p class="ng-binding">{{info.description}}</p>
+			                <h3 class="price ng-binding"><span>$</span>{{info.price | number:'.2' }}</h3>
+			        		<div>
+				  				<a class="btn btn-sm btn-primary" (click)=addCart(info,1) ng-transclude=""><span class="ng-scope">
+			                    	Add To Cart
+			                		</span></a>
+			                </div>
+
+			  	</div>
+	  		</div>
+	  		</div>
+	  		<br/>
+	  		<br/>
+	  		<div style="clear:both;"></div>
+	  		<div  class='row'  id ='divProductListBottom' style='display:none' >
+	  		<div  [hidden]="!CartItems.length">  
+				<h4>Cart Items {{CartItems.length}} </h4><a class="btn btn-sm btn-success" (click)="checkOut()"  ng-transclude=""><span class="ng-scope">Checkout</span></a>
+			</div>	
+		</div>
+		
+</div>

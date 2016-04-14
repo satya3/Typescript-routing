@@ -1,0 +1,26 @@
+.thumbnail {
+	min-height: 300px;
+}
+
+#divCartList td {
+    text-align:left;    
+    border-bottom:5px solid gray;
+    border-radius: 15px;
+}
+
+#divCartList th {
+	height: 40px;
+    text-align:center;
+    background:gray;
+    border-bottom:5px solid white;
+    border-radius: 5px;
+}
+#divCartList table {
+    border-bottom:5px solid gray;
+    border-radius: 5px;
+}
+#searchInput{
+	width:100%;	
+    margin-bottom: 30px;
+}
+</style>

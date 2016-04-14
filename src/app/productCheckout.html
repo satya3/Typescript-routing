@@ -1,0 +1,72 @@
+
+<div class='container' style='max-width:600px'>
+	<h4>Selected Item Count: {{CartItems.length}} </h4>
+      <div style='margin:30px'> 
+			<a class="btn btn-sm btn-primary" (click)="back()" ng-transclude=""><span class="ng-scope">back to product list</span></a>
+		   	<a class="btn btn-sm btn-danger" (click)=clearCart() ng-transclude=""><span class="ng-scope">clear cart</span></a>
+		</div>
+      <table class="table" >
+		<tr class="ng-binding">
+		  	
+	  		<th> 
+	  		</th>
+	  		<th> Items
+	  		</th>
+	  		<th> Price
+	  		</th>
+	  		<th> Quantity
+	  		</th>
+	  		<th> Value
+	  		</th>
+	  		<th> Action
+	  		</th>
+	    </tr>
+		<tr  *ngFor="#info of CartItems" class="ng-binding">
+			<td><img src="src/app/img/products/{{info.code}}.jpg" > </td>
+			<td style='width:60%'>
+				{{info.name}}
+				<p class="ng-binding">{{info.description}}</p>
+			</td>
+			<td style='text-aligh:right' >
+					<span>$</span>{{info.price | number:'.2' }}
+			</td>
+			<td> 
+				<input type="number" [(ngModel)]="info.quantity"  class="form-control">
+			</td>
+			<td style='text-aligh:right'>
+					<span>$</span>{{info.price * info.quantity | number:'.2' }}
+			</td>
+			<td style='text-aligh:right'>
+					<!-- <span></span>{{info.price * info.quantity | number:'.2' }} -->
+					<!-- <button type="button" (click)=removeItem(info) >Remove</button> -->
+					<a class="btn btn-sm btn-primary" (click)=RemoveCart(info) ng-transclude=""><span class="ng-scope">
+		                    	Remove
+		                		</span></a>
+			</td>
+
+
+		</tr>
+  
+	  <tr>
+	  	<td> </td>
+	  	<td> 
+	  		<h4 class="ng-binding">Total Order Value</h4>
+	  	</td>
+	  	<td> </td>
+	  	<td>
+	  		<h4 class="price ng-binding">{{getCartItems()}}</h4>
+
+	  	 </td>
+	  	<td>
+				<h4 class="price ng-binding"><span>$</span>{{getOrderValue() | number:'.2' }}</h4>
+	  	</td>
+	  </tr>
+		</table>
+		<div style='margin:30px'> 
+			<a class="btn btn-sm btn-primary" (click)="back()" ng-transclude=""><span class="ng-scope">back to product list</span></a>
+		   	<a class="btn btn-sm btn-danger" (click)=clearCart() ng-transclude=""><span class="ng-scope">clear cart</span></a>
+		   	<a class="btn btn-sm btn-success pull-right" (click)=showConfirmOrder() ng-transclude=""><span class="ng-scope">Place Your Order</span></a>
+		</div>
+
+ 	
+</div>      
