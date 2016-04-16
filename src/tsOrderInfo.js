@@ -22,7 +22,7 @@ var OrderInfo = (function () {
     OrderInfo = __decorate([
         core_1.Component({
             //selector: 'f',
-            templateUrl: 'src/app/OrderInfo.html'
+            templateUrl: '../src/app/OrderInfo.html'
         })
     ], OrderInfo);
     return OrderInfo;

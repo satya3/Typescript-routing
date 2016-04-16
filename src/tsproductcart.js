@@ -58,7 +58,7 @@ var ProductCart = (function () {
     ProductCart = __decorate([
         core_1.Component({
             //selector: 'f',
-            templateUrl: 'src/app/productCheckout.html'
+            templateUrl: '../src/app/productCheckout.html'
         })
     ], ProductCart);
     return ProductCart;

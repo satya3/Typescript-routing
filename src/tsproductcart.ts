@@ -4,8 +4,9 @@ import {Router,ROUTER_PROVIDERS,RouteConfig, ROUTER_DIRECTIVES,APP_BASE_HREF,Loc
 
 @Component({
   //selector: 'f',
-  templateUrl: 'src/app/productCheckout.html',
- 
+  templateUrl: '../src/app/productCheckout.html'
+
+    //templateUrl: '../src/app/OrderInfo.html',
 })
 
 export class ProductCart   {
@@ -65,7 +66,7 @@ export class ProductCart   {
        totalValue +=  this.CartItems[i].quantity  * this.CartItems[i].price;
     }
     return totalValue;
-  }
+}
   
   getCartItems:number()
   {

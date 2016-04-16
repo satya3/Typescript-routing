@@ -17,7 +17,7 @@
 		<div class='row'>
 	  		<div class='col-lg-3 col-sm-3'  *ngFor="#info of productlist  | myfilter:filter.value " >
 				<div class="thumbnail" >
-							<img src="src/app/img/products/{{info.code}}.jpg" >
+							<img src="../src/app/img/products/{{info.code}}.jpg" >
 			                <h4 class="ng-binding">{{info.name}}</h4>
 			                <p class="ng-binding">{{info.description}}</p>
 			                <h3 class="price ng-binding"><span>$</span>{{info.price | number:'.2' }}</h3>

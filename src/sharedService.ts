@@ -69,7 +69,7 @@ export class SharedService {
   }
   
 
-  orderNo: 201603001;
+  orderNo:201603001;
 
   getOrderNo:string()
   {
@@ -87,7 +87,6 @@ export class SharedService {
     }
     return totalValue;
   }
-  
   //information = [];
 
 } 

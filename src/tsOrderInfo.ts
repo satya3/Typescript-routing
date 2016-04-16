@@ -4,7 +4,7 @@ import {Router,ROUTER_PROVIDERS,RouteConfig, ROUTER_DIRECTIVES,APP_BASE_HREF,Loc
 
 @Component({
   //selector: 'f',
-  templateUrl: 'src/app/OrderInfo.html',
+  templateUrl: '../src/app/OrderInfo.html',
  
 })
 
@@ -23,7 +23,7 @@ export class OrderInfo   {
   {
     console.log('Back called');
     //this.CartItems = [];
-    this.service.checkoutProduct([]]);
+    this.service.checkoutProduct([]);
     this.router.navigate(['/ProductList']);
   }
 }

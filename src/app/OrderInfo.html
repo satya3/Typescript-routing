@@ -2,6 +2,7 @@
 	<div>
 		 Thank you for your Order! {{orderNo}}
 		 <h4 class="price ng-binding"><span>Order Value:$</span>{{orderValue | number:'.2' }}</h4>
-		 <a class="btn btn-sm btn-primary" (click)="back()" ng-transclude=""><span class="ng-scope">go to product list</span></a>
+		 <a class="btn btn-sm btn-primary" (click)="back()" ng-transclude="">
+			 <span class="ng-scope">go to product list</span></a>
 	</div>
 <div>
